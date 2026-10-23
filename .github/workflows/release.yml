@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build, sign and zip
+        run: VERSION="${GITHUB_REF_NAME#v}" ./scripts/release.sh
+
+      - name: Write checksum
+        run: |
+          cd dist
+          shasum -a 256 AdderAllNight-XR.zip | tee AdderAllNight-XR.zip.sha256
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/AdderAllNight-XR.zip
+            dist/AdderAllNight-XR.zip.sha256
+          generate_release_notes: true

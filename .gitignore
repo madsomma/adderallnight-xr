@@ -1,0 +1,28 @@
+# SwiftPM
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+*.xcodeproj
+xcuserdata/
+DerivedData/
+
+# Build output
+dist/
+*.app
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE
+.idea/
+.vscode/
+
+# Local notes
+README_local.md
+scripts/make-icon.sh

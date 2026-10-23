@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- App icon: the timer capsule at 50%, in color. Regenerate app_icon.icns with scripts/make-icon.sh. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2C6BF0"/>
+      <stop offset="1" stop-color="#081C52"/>
+    </linearGradient>
+    <linearGradient id="dose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8CF6FF"/>
+      <stop offset="1" stop-color="#28B4FF"/>
+    </linearGradient>
+    <clipPath id="body"><rect x="-360" y="-180" width="720" height="360" rx="180"/></clipPath>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+
+  <g transform="translate(512 512) rotate(-45)" filter="url(#shadow)">
+    <g clip-path="url(#body)">
+      <rect x="-360" y="-180" width="720" height="360" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="-360" y="-180" width="360" height="360" fill="url(#dose)"/>
+      <!-- gloss -->
+      <rect x="-330" y="-160" width="660" height="70" rx="35" fill="#FFFFFF" fill-opacity="0.16"/>
+    </g>
+    <rect x="-352" y="-172" width="704" height="344" rx="172" fill="none" stroke="#FFFFFF" stroke-opacity="0.92" stroke-width="22"/>
+    <!-- beads in the full half -->
+    <g fill="#0A2A70" fill-opacity="0.85">
+      <circle cx="-220" cy="45" r="36"/>
+      <circle cx="-112" cy="-58" r="36"/>
+      <circle cx="-104" cy="68" r="36"/>
+    </g>
+  </g>
+</svg>
